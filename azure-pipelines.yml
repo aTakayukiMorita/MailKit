@@ -9,7 +9,7 @@ trigger:
 pool:
   vmImage: 'windows-2019'
 
-name: 2.10.0$(Rev:.r)
+name: 2.10.0.1$(Rev:.r)
 
 variables:
   solution: 'MailKit.sln'
@@ -41,7 +41,7 @@ steps:
   inputs:
     targetType: 'filePath'
     filePath: 'azure-test-runner.ps1'
-  
+
 - task: PublishTestResults@2
   displayName: 'Publish Unit Test Results'
   inputs:
